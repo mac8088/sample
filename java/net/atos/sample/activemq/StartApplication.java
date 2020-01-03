@@ -12,6 +12,7 @@ public class StartApplication {
 		messageService.sendQueueMessage("我的测试消息1");
 		messageService.sendQueueMessage("我的测试消息2");
 		messageService.sendQueueMessage("我的测试消息3");
+		messageService.sendTopicMessage("我的测试消息4");
 	}
 
 }
