@@ -34,7 +34,7 @@
             </map>
         </constructor-arg>
     </bean>
-    <bean id="consumerListener" class="org.study.mq.kafka.spring.KafkaConsumerListener"/>
+    <bean id="consumerListener" class="net.atos.sample.kafka.spring.KafkaConsumerListener"/>
     <bean id="containerProperties_example" class="org.springframework.kafka.listener.config.ContainerProperties">
         <constructor-arg value="kafka-topic"/>
         <property name="messageListener" ref="consumerListener"/>
