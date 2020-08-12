@@ -1,15 +1,17 @@
 ﻿package net.atos.sample.kafka;
 
-import org.apache.kafka.clients.producer.*;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerRecord;
 
 public class ProducerSample {
 
     public static void main(String[] args) {
         Map<String, Object> props = new HashMap<String, Object>();
-        props.put("bootstrap.servers", "localhost:9092");
+        props.put("bootstrap.servers", "129.184.13.195:9092");
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 

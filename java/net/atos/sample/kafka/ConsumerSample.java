@@ -13,7 +13,7 @@ public class ConsumerSample {
         String topic = "test-topic";
 
         Properties props = new Properties();
-        props.put("bootstrap.servers", "localhost:9092");
+        props.put("bootstrap.servers", "129.184.13.195:9092");
         props.put("group.id", "testGroup1");
         props.put("enable.auto.commit", "true");
         props.put("auto.commit.interval.ms", "1000");
