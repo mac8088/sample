@@ -36,7 +36,7 @@ public class FlowDemo1 {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				
+
 				// 处理完调用request再请求一个数据
 				this.subscription.request(1);
 
@@ -73,7 +73,7 @@ public class FlowDemo1 {
 		}
 
 		// 5. 结束后 关闭发布者
-		// 正式环境 应该放 finally 或者使用 try-resouce 确保关闭
+		// 正式环境 应该放 finally 或者使用 try-resource 确保关闭
 		publiser.close();
 
 		// 主线程延迟停止, 否则数据没有消费就退出

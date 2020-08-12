@@ -14,8 +14,7 @@ import java.util.concurrent.SubmissionPublisher;
  * 
  * 输入源数据 integer, 过滤掉小于0的, 然后转换成字符串发布出去
  */
-class MyProcessor extends SubmissionPublisher<String>
-		implements Processor<Integer, String> {
+class MyProcessor extends SubmissionPublisher<String> implements Processor<Integer, String> {
 
 	private Subscription subscription;
 
@@ -129,7 +128,7 @@ public class FlowDemo2 {
 		publiser.submit(111);
 
 		// 7. 结束后 关闭发布者
-		// 正式环境 应该放 finally 或者使用 try-resouce 确保关闭
+		// 正式环境 应该放 finally 或者使用 try-resource 确保关闭
 		publiser.close();
 
 		// 主线程延迟停止, 否则数据没有消费就退出
