@@ -20,7 +20,7 @@ public class PersonConverterTest {
         assertEquals(personDTO.getId(), person.getId());
         assertEquals(personDTO.getName(), person.getName());
         assertEquals(personDTO.getBirth(), person.getBirthday());
-        String format = DateFormatUtils.format(personDTO.getBirth(), "yyyy-MM-dd HH:mm:ss");
+        String format = DateFormatUtils.format(personDTO.getBirth().getTime(), "yyyy-MM-dd HH:mm:ss");
         assertEquals(personDTO.getBirthDateFormat(),format);
         assertEquals(personDTO.getBirthExpressionFormat(),format);
 

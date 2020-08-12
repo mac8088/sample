@@ -73,7 +73,8 @@ public class UserService {
 		message.setKeys(pointMessage.getUserId());
 
 		// 将积分对象转成 JSON 字符串存到事件的内容字段中
-		message.setBody(JSON.toJSONString(pointMessage).getBytes());
+		String ret = JSON.toJSONString(pointMessage);
+		message.setBody(ret.getBytes());
 
 		// 发送消息，并封装本地事务处理逻辑
 		SendResult sendResult = producer.getProducer().sendMessageInTransaction(message, "");
