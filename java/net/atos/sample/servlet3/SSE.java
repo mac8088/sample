@@ -29,6 +29,7 @@ public class SSE extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		// 最重要的设置 
 		response.setContentType("text/event-stream");
 		response.setCharacterEncoding("utf-8");
 
